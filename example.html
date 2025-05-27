@@ -1,0 +1,18 @@
+<script src="https://ignition.pages.dev/boot.js"></script>
+<script src="https://ignition.pages.dev/loader.js"></script>
+<script src="https://ignition.pages.dev/config.js"></script>
+<script>
+  ignition.boot();
+
+  ignition.select("mainTitle", "h1");
+  ignition.text("mainTitle", "Hello, World!");
+  ignition.style("mainTitle", { color: "deeppink", fontSize: "3em" });
+
+  ignition.create("box", "div", { innerText: "I am a box" });
+  ignition.append("box", "body");
+  ignition.style("box", { background: "black", color: "white", padding: "1em" });
+
+  ignition.on("box", "click", () => {
+    ignition.toggleClass("box", "highlight");
+  });
+</script>
